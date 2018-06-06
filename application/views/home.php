@@ -90,7 +90,7 @@
 											
 												<i class="mdi-navigation-more-vert right"></i>
 												<li><a href="<?php echo base_url()?>index.php/Admin/login">Login</a></li>
-                        <li><a href="<?php echo base_url()?>index.php/Control_login/tambah_customer">Register</a></li>
+                        <li><a href="<?php echo base_url()?>index.php/Admin/registrasi">Register</a></li>
 											</a>
 										</li>
 									</ul>

@@ -31,7 +31,8 @@ class Admin extends CI_Controller
 	}
 
 	function registrasi(){
-		$this->load->view('master/register');
+		/*$this->load->view('master/register');*/
+		$this->load->view('containerRegister');
 	}
 
 

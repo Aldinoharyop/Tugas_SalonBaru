@@ -110,7 +110,7 @@
                 <div class="panel-heading">Register</div>
                 <div class="panel-body">
                     <form class="form-horizontal" role="form" method="POST" 
-                    action="<?php echo base_url(). 'Control_login/input'; ?>">
+                    action="input_customer">
                         
 
                             
@@ -121,7 +121,7 @@
                         
                             <label for="email" class="col-md-4 control-label">Email</label>
                             <div class="col-md-6">
-                                <input id="Email" type="text" class="form-control" name="Email" value="Email" required>
+                                <input id="email" type="text" class="form-control" name="email" value="Email" required>
                             </div>
 
                             <label for="nohp" class="col-md-4 control-label">Nomor HP</label>
