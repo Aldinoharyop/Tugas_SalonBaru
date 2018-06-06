@@ -1,7 +1,7 @@
 
 <html>
 <head>
-<title>About</title>
+<title>Login</title>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Salon Muslimah</title>

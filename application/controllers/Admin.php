@@ -35,6 +35,14 @@ class Admin extends CI_Controller
 		$this->load->view('containerRegister');
 	}
 
+	function viewPegawai(){
+		$this->load->view('master/pegawai');
+	}
+
+	function viewLayanan(){
+		$this->load->view('master/service');
+	}
+
 
 }
 

@@ -10,6 +10,54 @@ defined('BASEPATH') OR exit('No direct script access allowed');{
           $this->load->view('layanan', $data);
       }
 
+          function tambah_paket(){
+        $this->load->view('master/registerPegawai');
+    }
+
+    function input_paket(){
+        $id_service = $this->input->post('id_service');
+        $id_category = $this->input->post('id_category');
+        $nama = $this->input->post('nama');
+        $harga = $this->input->post('harga');
+        
+        $data = array(
+            'id_service' => $id_service,
+            'nama' => $nama,
+            'harga' => $harga
+            );
+        /*$this->Model_login->input_data_customer($data,'customers');*/
+        $this->db->insert('service',$data);
+        /*redirect('Control_login/index_customer');*/
+        $this->load->view('admin/home');
+    }
+    
+    function edit_paket($id){
+        $where = array('id_service' => $id);
+        $data['service'] = $this->Model_login->edit_data_pegawai($where,'service')->result();
+        $this->load->view('',$data);
+    }
+    
+    function hapus_paket($id){
+        $where = array('id_service' => $id);
+        $this->Model_login->hapus_data_customer($where,'service');
+        redirect('Control_login/index');
+    }
+    
+    function update_paket(){
+        $id_service = $this->input->post('id_service');
+        $nama = $this->input->post('nama');
+        $harga = $this->input->post('harga');
+
+        $data = array(
+            'id_service' => $id_service,
+            'nama' => $nama,
+            'harga' => $harga
+            );
+
+    $this->Model_login->update_data($where,$data,'service');
+    redirect('Control_login/index');
+    }
+
     }
 }
 ?>

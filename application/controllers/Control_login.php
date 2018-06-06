@@ -44,8 +44,9 @@ class Control_login extends CI_Controller{
 			);
 		/*$this->Model_login->input_data_customer($data,'customers');*/
 		$this->db->insert('customers',$data);
-		redirect('base_url()/index.php/Control_login/index_customer');
+		/*redirect('base_url()/index.php/Control_login/index_customer');*/
 		/*redirect('customers');*/
+		$this->load->view('home');
 	}
 	
 	function edit_customer($id){
@@ -106,7 +107,7 @@ class Control_login extends CI_Controller{
 		/*$this->Model_login->input_data_customer($data,'customers');*/
 		$this->db->insert('pegawai',$data);
 		/*redirect('Control_login/index_customer');*/
-		redirect('index_pegawai');
+		$this->load->view('admin/home');
 	}
 	
 	function edit_pegawai($id){
@@ -165,7 +166,8 @@ class Control_login extends CI_Controller{
 		/*$this->Model_login->input_data_customer($data,'customers');*/
 		$this->db->insert('admins',$data);
 		/*redirect('Control_login/index_customer');*/
-		redirect('admins');
+		/*redirect('admins');*/
+		$this->load->view('master/home');
 	}
 	
 	function edit_admin($id){

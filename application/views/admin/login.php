@@ -1,7 +1,7 @@
 
 <html>
 <head>
-<title>About</title>
+<title>Login</title>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Salon Muslimah</title>
@@ -112,16 +112,16 @@
 
             <div class="col-md-6 col-md-offset-3 funfact-box">
               <div class="card-panel white">
-                <h3 class="about-subtitle">Login</h3>
+                <h3 class="about-subtitle">Login Pegawai</h3>
                 <form action="{{ route('admin.login.submit') }}" method="post">
                   {{ csrf_field() }}
                   <div class="input-field grey-text text-darken-1">
-                    <input id="nip" type="text" name="nip" value="{{ old('nip') }}" required>
-                    <label for="nip">NIP</label>
+                    <input id="nip" type="text" name="nip" placeholder="NIP" required>
+                    
                   </div>
                   <div class="input-field grey-text text-darken-1">
-                    <input id="password" type="password" name="password" required>
-                    <label for="password">Password</label>
+                    <input id="password" type="password" name="password" placeholder="password" required>
+
                   </div>
                   @if ($errors->has('nip'))
                       <span class="help-error">
