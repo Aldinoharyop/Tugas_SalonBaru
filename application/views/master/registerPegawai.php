@@ -1,7 +1,7 @@
 
 <html>
 <head>
-<title>About</title>
+<title>Register Pegawai</title>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Salon Muslimah</title>
@@ -102,12 +102,7 @@
                     <!-- mini profile end-->
                     </ul>
     </header>
-
-    @extends('master.layouts.master')
-
-@section('title','Register Pegawai - Master AzZahra')
-
-@section('content')
+    <!-- ------------------------------------------------------------------------------------------------ -->
   <section id="funfacts" class="root-sec grey lighten-5 funfact-wrap">
     <div class="sec-inner padd-tb-120">
       <div class="container">
@@ -117,38 +112,31 @@
             <div class="col-md-6 col-md-offset-3 funfact-box">
               <div class="card-panel white">
                 <h3 class="about-subtitle">Register Pegawai</h3>
-                <form method="POST" action="{{ route('master.registerPegawai.submit') }}">
-                    {{ csrf_field() }}
+                <form method="POST" action="input_pegawai">
+                   
 
-                  <div class="input-field grey-text text-darken-1">
+<!--                   <div class="input-group-prepend">
                     <select name="cabang">
-                      <option value="" disabled selected>Pilih Cabang</option>
-                      @foreach ($cabang as $cabang)
-                        <option value="{{ $cabang->kodeCabang}}">{{$cabang->nama}}</option>
-                      @endforeach
+                      <option class="input-group-text" value="" selected>Pilih Cabang</option>
+                        <option value="Kode Cabang">SBYT01</option>
+                        <option value="Kode Cabang">SBYT02</option>
                     </select>
                     <label>Cabang</label>
+                  </div><br> -->
+
+                   
+                   <div class="input-field grey-text text-darken-1">
+                    <input id="kodeCabang" class="" type="text" name="kodeCabang" placeholder="SBYT01 / SBYT02"  required>
                   </div>
 
                   <div class="input-field grey-text text-darken-1">
-                    <input id="nama" class="{{ $errors->has('nama') ? ' invalid' : '' }}"type="text" name="nama" value="{{ old('nama') }}" required>
-                    <label for="nama">Nama</label>
+                    <input id="nama" class="" type="text" name="nama" placeholder="Nama"  required>
                   </div>
-                  @if ($errors->has('nama'))
-                      <span class="help-error">
-                          <strong>{{ $errors->first('nama') }}</strong>
-                      </span>
-                  @endif
+                
 
                   <div class="input-field grey-text text-darken-1">
-                    <input id="nip" class="{{ $errors->has('nip') ? ' invalid' : '' }}" type="text" name="nip" value="{{ old('nip') }}" required>
-                    <label for="nip">NIP</label>
+                    <input id="nip" class="" type="text" name="nip" placeholder="NIP" required>
                   </div>
-                  @if ($errors->has('nip'))
-                      <span class="help-error">
-                          <strong>{{ $errors->first('nip') }}</strong>
-                      </span>
-                  @endif
 
                   <button class="btn waves-effect waves-light brand-bg white-text regular-text" type="submit" name="action">Register</button>
                 </form>

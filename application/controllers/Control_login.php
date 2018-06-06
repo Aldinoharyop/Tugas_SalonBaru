@@ -11,6 +11,13 @@ class Control_login extends CI_Controller{
 		$this->load->helper('url');
 	}
 
+/*	function get_cabang(){
+		$data = array {
+			'cabang' => $this->Model_login->getArticle();
+		}
+		$this->load->view()
+	}*/
+
 	function index_customer(){
 		$this->load->view('admin/home');
 	}
@@ -99,7 +106,7 @@ class Control_login extends CI_Controller{
 		/*$this->Model_login->input_data_customer($data,'customers');*/
 		$this->db->insert('pegawai',$data);
 		/*redirect('Control_login/index_customer');*/
-		redirect('pegawai');
+		redirect('index_pegawai');
 	}
 	
 	function edit_pegawai($id){

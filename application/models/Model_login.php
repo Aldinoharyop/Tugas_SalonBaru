@@ -6,6 +6,13 @@
 class Model_login extends CI_Model
 {
 
+/*	function get_cabang(){
+		$this->db->select('kodeCabang');
+		$this->db->from('cabang');
+
+		return $this->db->get()->result();
+	}*/
+
 	function tampil_data_customer(){
 		return $this->db->get('customers');
 	}

@@ -1,7 +1,7 @@
 
 <html>
 <head>
-<title>About</title>
+<title>Register Admin</title>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Salon Muslimah</title>
@@ -112,54 +112,24 @@
             <div class="col-md-6 col-md-offset-3 funfact-box">
               <div class="card-panel white">
                 <h3 class="about-subtitle">Register Admin</h3>
-                <form method="POST" action="{{ route('master.registerAdmin.submit') }}">
-                    {{ csrf_field() }}
+                <form method="POST" action="input_admin">
+                   
 
                   <div class="input-field grey-text text-darken-1">
-                    <select name="cabang">
-                      <option value="" disabled selected>Pilih Cabang</option>
-                      @foreach ($cabang as $cabang)
-                        <option value="{{ $cabang->kodeCabang}}">{{$cabang->nama}}</option>
-                      @endforeach
-                    </select>
-                    <label>Cabang</label>
+                    <input id="kodeCabang" class="" type="text" name="kodeCabang" placeholder="SBYT01 / SBYT02"  required>
                   </div>
 
                   <div class="input-field grey-text text-darken-1">
-                    <input id="nama" class="{{ $errors->has('nama') ? ' invalid' : '' }}"type="text" name="nama" value="{{ old('nama') }}" required>
-                    <label for="nama">Nama</label>
+                    <input id="nama" class=""type="text" name="nama" placeholder="Nama" required>
                   </div>
-                  @if ($errors->has('nama'))
-                      <span class="help-error">
-                          <strong>{{ $errors->first('nama') }}</strong>
-                      </span>
-                  @endif
 
                   <div class="input-field grey-text text-darken-1">
-                    <input id="nip" class="{{ $errors->has('nip') ? ' invalid' : '' }}" type="text" name="nip" value="{{ old('nip') }}" required>
-                    <label for="nip">NIP</label>
+                    <input id="nip" class="" type="text" name="nip" placeholder="NIP" required>
                   </div>
-                  @if ($errors->has('nip'))
-                      <span class="help-error">
-                          <strong>{{ $errors->first('nip') }}</strong>
-                      </span>
-                  @endif
 
                   <div class="input-field grey-text text-darken-1">
-                    <input id="password" class="{{ $errors->has('password') ? ' invalid' : '' }}" type="password" name="password" required>
-                    <label for="password">Password</label>
+                    <input id="password" class="" type="password" name="password" placeholder="Password" required>
                   </div>
-                  @if ($errors->has('password'))
-                      <span class="help-error">
-                          <strong>{{ $errors->first('password') }}</strong>
-                      </span>
-                  @endif
-
-                  <div class="input-field grey-text text-darken-1">
-                    <input id="password-confirm" type="password" name="password_confirmation" required>
-                    <label for="password-confirm">Password Confirmation</label>
-                  </div>
-
 
                   <button class="btn waves-effect waves-light brand-bg white-text regular-text" type="submit" name="action">Register</button>
                 </form>

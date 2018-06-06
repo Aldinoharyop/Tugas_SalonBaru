@@ -116,22 +116,22 @@
                             
                             <label for="nama" class="col-md-4 control-label">Nama</label>
                             <div class="col-md-6">
-                                <input id="nama" type="text" class="form-control" name="nama" value="Nama" required>
+                                <input id="nama" type="text" class="form-control" name="nama"  required>
                             </div>
                         
                             <label for="email" class="col-md-4 control-label">Email</label>
                             <div class="col-md-6">
-                                <input id="email" type="text" class="form-control" name="email" value="Email" required>
+                                <input id="email" type="text" class="form-control" name="email"  required>
                             </div>
 
                             <label for="nohp" class="col-md-4 control-label">Nomor HP</label>
                             <div class="col-md-6">
-                                <input id="nohp" type="text" class="form-control" name="nohp" value="Nomor Hp" required="digits">
+                                <input id="nohp" type="text" class="form-control" name="nohp"  required="digits">
                             </div>
 
                             <label for="alamat" class="col-md-4 control-label">Alamat</label>
                             <div class="col-md-6">
-                                <input id="alamat" type="text" class="form-control" name="alamat" value="Alamat" required>
+                                <input id="alamat" type="text" class="form-control" name="alamat"  required>
                             </div>
 
                         
@@ -141,13 +141,13 @@
                                 <input id="password" type="password" class="form-control" name="password" required>
                             </div>
 
-                        <div class="form-group">
+<!--                         <div class="form-group">
                             <label for="password-confirm" class="col-md-4 control-label">Confirm Password</label>
 
                             <div class="col-md-6">
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
                             </div>
-                        </div>
+                        </div> -->
 
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
