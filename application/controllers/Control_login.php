@@ -202,5 +202,7 @@ class Control_login extends CI_Controller{
 	redirect('Control_login/index');
 	}
 
+	/*-----------------------------------------------------------------------------------------*/
+
 }
 ?>

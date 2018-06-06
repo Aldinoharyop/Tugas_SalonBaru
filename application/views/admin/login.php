@@ -112,22 +112,18 @@
 
             <div class="col-md-6 col-md-offset-3 funfact-box">
               <div class="card-panel white">
-                <h3 class="about-subtitle">Login Pegawai</h3>
-                <form action="{{ route('admin.login.submit') }}" method="post">
-                  {{ csrf_field() }}
+                <h3 class="about-subtitle">Login Customer</h3>
+                <form action="<?php echo base_url(); ?>index.php/VerifyLogin/check_database" method="post">
+                  
                   <div class="input-field grey-text text-darken-1">
-                    <input id="nip" type="text" name="nip" placeholder="NIP" required>
+                    <input name="email" type="text" placeholder="Email" required>
                     
                   </div>
                   <div class="input-field grey-text text-darken-1">
                     <input id="password" type="password" name="password" placeholder="password" required>
 
                   </div>
-                  @if ($errors->has('nip'))
-                      <span class="help-error">
-                          <strong>NIP atau Password anda salah</strong>
-                      </span>
-                  @endif
+
                   <p>
                     <input type="checkbox" class="filled-in" id="filled-in-box" name="remember" {{ old('remember') ? 'checked' : '' }}/>
                     <label for="filled-in-box">Remember Me</label>

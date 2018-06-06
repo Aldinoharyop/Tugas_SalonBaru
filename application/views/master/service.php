@@ -115,7 +115,7 @@
                 <h3 class="dashboard-title">Layanan</h3>
                 <div class="row dashboard-menu center-align">
                   <div class="col-xs-6">
-                    <a href="{{route('master.addService')}}">
+                    <a href="<?php echo base_url()?>index.php/Service/tambah_service">
                     <i class="fa fa-server fa-fw "></i>
                     <h3 class="menu-title">Tambah Layanan</h3>
                     </a>

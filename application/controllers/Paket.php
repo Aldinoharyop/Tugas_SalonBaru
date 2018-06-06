@@ -14,7 +14,7 @@ class Paket extends CI_Controller {
     }
 
     function tambah_paket(){
-        $this->load->view('master/registerPegawai');
+        $this->load->view('master/addBundle');
     }
 
     function input_paket(){
@@ -30,7 +30,7 @@ class Paket extends CI_Controller {
         /*$this->Model_login->input_data_customer($data,'customers');*/
         $this->db->insert('bundle',$data);
         /*redirect('Control_login/index_customer');*/
-        $this->load->view('admin/home');
+        $this->load->view('master/home');
     }
     
     function edit_paket($id){

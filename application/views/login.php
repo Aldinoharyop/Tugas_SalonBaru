@@ -1,7 +1,6 @@
-
-<html>
+<html class="no-js">
 <head>
-<title>Tambah Layanan</title>
+<title>Login</title>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Salon Muslimah</title>
@@ -38,9 +37,14 @@
   <!-- colors/colorX.css replace X with 1-8 -->
   <link rel="stylesheet" href="<?php echo base_url() ?>asset/materialx/css/colors/color1.css" />
 
-  <script src="<?php echo base_url() ?>asset/materialx/js/html5shiv.js" /></script>
+  
 </head>
 <body>
+<
+    <!-- Main Container -->
+  <main id="app" class="main-section">
+    <!-- header navigation start -->
+
   <header id="navigation" class="root-sec white nav">
       <div class="container">
         <div class="row">
@@ -65,24 +69,24 @@
                         <i class="fa fa-list fa-fw"></i>Layanan</a>
                     </li>
                     <li>
-                      <a href="<?php echo base_url()?>index.php/Paket" data-section="#bundles" class="menu-smooth-scroll">
+                      <a href="#" data-section="#bundles" class="menu-smooth-scroll">
                         <i class="fa fa-list fa-fw"></i>Paket</a>
                     </li>
                     <li>
-                      <a href="<?php echo base_url()?>index.php/Testimoni" data-section="#testimonial" class="menu-smooth-scroll">
+                      <a href="#" data-section="#testimonial" class="menu-smooth-scroll">
                         <i class="fa fa-comments fa-fw"></i>Testimonial</a>
                     </li>
                     <li>
                       <a href="#" data-section="#contact" class="menu-smooth-scroll">
                         <i class="fa fa-phone-square fa-fw"></i>Contact</a>
                     </li>
-                    
                     <li>
-                      
-                      
+                      <a href="{{ route('reservation') }}">
+                        <i class="fa fa-handshake-o fa-fw"></i>Reservasi</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-button blog-submenu-init" href="#!" data-activates="dropdown1">
                         <i class="mdi-navigation-more-vert right"></i>
-                        <li><a href="<?php echo base_url()?>index.php/Admin/login">Login</a></li>
-                        <li><a href="<?php echo base_url()?>index.php/Admin/registrasi">Register</a></li>
                       </a>
                     </li>
                   </ul>
@@ -103,6 +107,7 @@
                     </ul>
     </header>
 
+    
   <section id="funfacts" class="root-sec grey lighten-5 funfact-wrap">
     <div class="sec-inner padd-tb-120">
       <div class="container">
@@ -111,38 +116,22 @@
 
             <div class="col-md-6 col-md-offset-3 funfact-box">
               <div class="card-panel white">
-                <h3 class="about-subtitle">Tambah Layanan</h3>
-                <form method="POST" action="input_service">
-             
-
-<!--                   <div class="input-field grey-text text-darken-1">
-                    <select name="category">
-                      <option value="" disabled selected>Pilih Category</option>
-                      @foreach ($category as $category)
-                        <option value="{{ $category->id_category}}">{{$category->nama}}</option>
-                      @endforeach
-                    </select>
-                    <label>Category</label>
-                  </div> -->
-
-                  <div class="input-field grey-text text-darken-1">
-                    <input id="id_category" class="{{ $errors->has('nama') ? ' invalid' : '' }}"type="text" name="id_category" placeholder="Id Category 1-4" required>
-                    
+                <h3 class="about-subtitle">Login</h3>
+                <form class="form" action="<?php echo base_url(); ?>index.php/VerifyLogin/check_database" 
+                            method="POST">
+                        <p class="muted text-center" >
+                        <font color="#000000">
+                            Masukkan username dan password anda
+                        </p>
+                        <input id="name" name="email" type="text" placeholder="Email" class="input-block-level">
+                        <input id="password" name="password" type="password" placeholder="Password" class="input-block-level">
+                        <br><br>
+                        <input class="btn btn-large btn-primary btn-block" type="submit" value="Masuk">
                   </div>
-
-                  <div class="input-field grey-text text-darken-1">
-                    <input id="nama" class="{{ $errors->has('nama') ? ' invalid' : '' }}"type="text" name="nama" placeholder="Nama" required>
-                    
+                        
+                        
                   </div>
-
-                  <div class="input-field grey-text text-darken-1">
-                    <input id="harga" class="{{ $errors->has('harga') ? ' invalid' : '' }}" type="text" name="harga" placeholder="Harga" required>
-                    
-                  </div>
-
-                  <button class="btn waves-effect waves-light brand-bg white-text regular-text" type="submit" name="action">Tambah</button>
-                </form>
-              </div>
+                    </form>
             </div>
 
           </div>
@@ -152,6 +141,7 @@
       <!-- .container end -->
     </div>
   </section>
+
 
 
 </body>
